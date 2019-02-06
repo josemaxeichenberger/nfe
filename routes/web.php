@@ -40,7 +40,15 @@ Route::get('partners/1', function(){
     return view('partners.edit');
 });
 
-Route::get('products', 'ProductController@index');
+Route::group(['prefix' => 'products'], function() {
+    Route::get('/', 'ProductController@index');
+    Route::post('/', 'ProductController@index');
+    Route::get('/edit', 'ProductController@edit');
+    Route::get('/edit/{id}', 'ProductController@edit');
+    Route::get('/show/{id}', 'ProductController@show');
+    Route::post('/update', 'ProductController@update');
+    Route::get('/destroy/{id}', 'ProductController@destroy');
+});
 
 Route::get('imports', function(){
     return view('imports.index');
