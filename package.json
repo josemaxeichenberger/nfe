@@ -35,7 +35,7 @@
     "jszip": "^3.1.5",
     "laravel-mix": "^2.0",
     "lodash": "^4.17.11",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "pdfmake": "^0.1.50",
     "popper.js": "^1.14.7",
     "sass-loader": "^7.1.0",
